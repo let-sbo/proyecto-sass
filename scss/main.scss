@@ -1,0 +1,42 @@
+@import 'vars';
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: rgb(156, 4, 101);
+    @include flex(row);
+    div{
+        height: 10vh;
+        width: 40vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 20px;
+        div{width: 7vw;
+            height: 7vw;
+            border-radius: 50%;
+            transition: .3s;
+            &:hover{
+                background-color:rgb(156, 4, 101);
+                &:nth-child(1){
+                    background-color: royalblue;
+                }
+            }
+
+            i{
+                font-size: 2em;
+                color: #000000ee;
+            }
+        }
+    }
+}
